@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="fr_FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Commune de Daroul Mouhty</title>
+
+    <link rel="icon" href="mairie_img/logo_img.jpg">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    
+
+    <!-- Swipper CSS -->
+    
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    
+    <style>
+        .card__img{
+        display: block;
+        max-width: 100%;
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 1.5rem;
+        }
+    </style>
+
+
+  
+
+    
+  </head>
+  <body>
+    <header>
+      <nav id="navmenu" class="navbar">
+        <div class="logo_wrapper">
+          <a href="#" class="nav-logo">
+            <img src="mairie_img/logo_img.jpg" alt="logo mairie" class="logo_mairie">
+            <h3 class="logo-text">Commune de Daroul<br>Mouhty</br></h3>
+          </a>
+
+        </div>
+        
+
+        <ul class="nav-menu">
+          <button id="menu-close-button" class="fas fa-times"></button>
+          <li class="nav-item">
+            
+            <li class="dropdown">
+              <a href="index.html" class="nav-link">Accueil<i class="ri-arrow-down-s-line"></i></a>
+              <ul class="dropdown-content">
+                <li>
+                  <a  class="dropdown-link">LA MAIRIE<i class="ri-arrow-right-s-line"></i></a>
+                  <div class="dropdown-content1">
+                    <ul>
+                      <li><a href="#mot_du_maire" class="dropdown-link">MOT DU MAIRIE</a></li>
+                      <li><a href="#conseil_municipal" class="dropdown-link">LE CONSEIL MUNICIPAL</a></li>
+                      
+                    </ul>
+
+                  </div>
+                  
+                  
+                  
+                </li>
+                
+                <li><a href="#About" class="dropdown-link">LA COMMUNE</a></li>
+                <li><a href="#actualité" class="dropdown-link">ACTUALITÉS</a></li>
+                
+                
+              </ul>
+
+            </li>
+
+            
+          </li>
+         
+          <li class="nav-item">
+            <a href="news.html" class="nav-link">Actualité</a>
+          </li>
+          <li class="nav-item">
+            <a href="p&p.html" class="nav-link">Projet & Partenariat</a>
+          </li>
+          <li class="nav-item">
+            <li class="dropdown">
+              <a href="docs.html" class="nav-link">Informations<i class="ri-arrow-down-s-line"></i></a>
+             
+              <ul class="dropdown-content">
+                
+                
+                <li><a href="etat_civil.html" class="dropdown-link">Demande d'etat civil</a></li>
+                <li><a href="docs.html" class="dropdown-link">Documentations</a></li>
+                
+                
+              </ul>
+
+            </li>
+            <li class="nav-item">
+            <a href="GESTION DE DEMANDE.html" class="nav-link">Gestion des demandes</a>
+          </li>
+            
+          </li>
+          <li class="nav-item">
+            <a href="Galleries.html" class="nav-link">Galleries</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contacts</a>
+          </li>
+          
+        </ul>
+        <button id="menu-open-button" class="fas fa-bars"></button>
+      </nav>
+    </header>
+
+    <main>
+      
+      
+
+      <!-- accueil -->
+      <section id="Accueil" class="accueil_section">
+
+          <script>
+            function slideNext() {
+              let lists = document.querySelectorAll(".homepage-item");
+              document.getElementById("slide").appendChild(lists[0]);
+            }
+
+            // Automatisation avec un intervalle de 3 secondes (modifiable)
+            let interval = setInterval(slideNext, 5000);
+
+            // Optionnel : arrêter l'animation au survol et la reprendre au départ
+            document.getElementById("slide").addEventListener("mouseenter", () => clearInterval(interval));
+            document.getElementById("slide").addEventListener("mouseleave", () => interval = setInterval(slideNext, 5000));
+
+
+
+          </script>
+        <div class="section-content">
+          <div class="caroussel-container">
+            <div id="slide" class="homepage-slide">
+              <div class="homepage-item" style="background-image: url(mairie_img/homepage10.jpg)">
+                <div class="homepage-content">
+                  <div class="hompage-name">BIENVENUE</div>
+                  <div class="hompage-des">Dans la commune de daroul mouhty</div>
+                </div>
+              </div>
+              
+              <div class="homepage-item" style="background-image: url(mairie_img/homepage9.jpg); ">
+                <div class="homepage-content">
+                  <div class="hompage-name">BIENVENUE</div>
+                  <div class="hompage-des">Dans la commune de daroul mouhty</div>
+                </div>
+              </div>
+              <div class="homepage-item" style="background-image: url(mairie_img/homepage7.jpg);">
+                <div class="homepage-content">
+                  <div class="hompage-name">BIENVENUE</div>
+                  <div class="hompage-des">Dans la commune de daroul mouhty</div>
+                </div>
+              </div>
+              <div class="homepage-item" style="background-image: url(mairie_img/homepage4.jpg);">
+                <div class="homepage-content">
+                  <div class="hompage-name">BIENVENUE</div>
+                  <div class="hompage-des">Dans la commune de daroul mouhty</div>
+                </div>
+              </div>
+              <div class="homepage-item" style="background-image: url(mairie_img/homepage5.jpg);">
+                <div class="homepage-content">
+                  <div class="hompage-name">BIENVENUE</div>
+                  <div class="hompage-des">Dans la commune de daroul mouhty</div>
+                </div>
+              </div>
+
+              <div class="homepage-item" style="background-image: url(mairie_img/homepage6.jpg);">
+                <div class="homepage-content">
+                  <div class="hompage-name">BIENVENUE</div>
+                  <div class="hompage-des">Dans la commune de daroul mouhty</div>
+                </div>
+              </div>
+              
+              
+  
+              
+              
+            </div>
+  
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- about section -->
+      
+      <section id="mot_du_maire" class="about-section">
+        <div class="section-content">
+          <div class="about-us-img">
+            <img src="mairie_img/mayor_profil_pic3.jpg" alt="about" class="about-img" />
+          </div>
+          <div class="about-us-text">
+            <h2 class="about-us-title">Le mot du maire!</h2>
+            <p class="about-us-paragraph">
+              C’est avec un immense plaisir que le Conseil municipal et moi-même vous accueillons, animés par la conviction que ce
+              lien nouvellement tissé favorisera des échanges réguliers et fructueux, contribuant ainsi au développement de notre
+              commune.
+              Atteindre cet objectif est un défi constant qui nécessite l’engagement de toutes les filles et tous les fils de Daroul
+              Mouhty.
+              Dans cette optique, nous nous engageons à promouvoir une gouvernance participative, fondée sur un partenariat dynamique
+              entre citoyens et élus, tout en ancrant durablement la transparence dans la gestion des affaires municipales. Cela
+              garantira l’efficacité de notre action au service de la population.
+              Je suis persuadé qu’avec l’implication et la détermination de chacun, nous réussirons à renforcer l’identité et le
+              rayonnement de notre chère commune, Daroul Mouhty.
+              
+            </p>
+            <h3 class="signature_maire">Le maire Madiop Biteye</h3>
+            <div class="social-link-list">  
+              <a href="https://www.facebook.com/mairiedaroulmouhty/" class="social-link"
+                ><i class="fa-brands fa-facebook" aria-hidden="true"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-twitter" aria-hidden="true"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- conseil_municipal -->
+
+      <section id="conseil_municipal" class="conseil-member">
+          
+         
+        
+        <div class="section-content">
+          
+            <h2 id="mun-section-title" class="about-us-title">Membres du conseil municipal</h2>
+          
+          
+          <div class="conseil-member-container">
+            <div class="conseil-member-list">
+              <article class="card__article">
+                <img src="mairie_img/membre conseil/momy niang.jpg" alt="image" class="card__img">
+
+                <div class="card__data">
+                  <span class="card__description">MOMY NIANG</span>
+                  <h4 class="card__title">1ere adjointe au maire</h4>
+                </div>
+              </article>
+
+              <article class="card-article">
+                <img src="mairie_img/membre conseil/amar fall.jpg" alt="image" class="card__img">
+
+                <div class="card__data">
+                  <span class="card__description">PAPE AMAR FALL</span>
+                  <h4 class="card__title">2eme adjoint au maire</h4>
+                  
+
+                </div>
+              </article>
+
+              <article class="card-article">
+                <img src="mairie_img/membre conseil/fatou abass.jpg" alt="image" class="card__img">
+
+                <div class="card__data">
+                  <span class="card__description">MAME FATOU MBACKE</span>
+                  <h4 class="card__title">3eme adjointe au maire</h4>
+                  
+
+                </div>
+              </article>
+
+              <article class="card-article">
+                <img src="mairie_img/membre conseil/cheikh fall.jpg" alt="image" class="card__img">
+
+                <div class="card__data">
+                  <span class="card__description">CHEIKH FALL</span>
+                  <h4 class="card__title">4eme adjoint au maire</h4>
+                  
+
+                </div>
+              </article>
+
+              <article class="card-article">
+                <img src="mairie_img/membre conseil/daba diop.jpg" alt="image" class="card__img">
+
+                <div class="card__data">
+                  <span class="card__description">DABA DIOP</span>
+                  <h4 class="card__title">Sécrétaire municipale</h4>
+                  
+
+                </div>
+              </article>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- commune-->
+      <section  id="About" class="hero-section">
+
+        <h2 class="about-us-title">La commune de Daroul Mouhty</h2>
+         
+        <div class="section-content">
+          
+          <div class="hero-detail">
+            
+            <h3 class="sous-titre">
+              Historique de Daroul Mouhty
+            </h3>
+            <p class="description">
+              La ville de Daroul Mouhty, qui sert de siège et de chef-lieu à la communauté rurale et à l'arrondissement du même nom,
+              est relativement récente. Elle a été fondée en 1912 par Mame Thierno Birahim Mbacké, sur instruction de son frère et
+              guide spirituel, Cheikh Ahmadou Bamba Mbacké.
+              À l'origine, Mame Thierno Birahim Mbacké résidait à Mbacké Kadior, mais face aux difficultés liées à l'accès aux terres,
+              il décida de s’établir à Daroul Mouhty. Avec la politique de décentralisation lancée par l'État du Sénégal en 1972, les
+              communautés rurales furent créées. L’arrondissement de Daroul Mouhty fut alors subdivisé en sept communautés rurales,
+              dont celle de Daroul Mouhty.
+            </p>
+
+            
+          </div>
+          <div class="hero-img-wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30824.806163746704!2d-16.069093120507674!3d15.04254151723619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeea5b69318d5771%3A0xa29e0ddc3efe79d5!2sDarou%20Mouhty!5e0!3m2!1sfr!2ssn!4v1742969957900!5m2!1sfr!2ssn" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+
+        <div class="stats">
+
+          <h3>La commune en chiffre</h3>
+          
+            <div class="stats-list">
+              <div class="stats-items">
+                <i class="bi bi-map-fill" style="font-size:36px;"></i>
+                <h2 class="stats-title">412,9 km2</h2>
+                <p class="stats-text">Superficies</p>
+  
+              </div>
+    
+              <div class="stats-items">
+                <i class="bi bi-people-fill" style="font-size:36px;"></i>
+                <h2 class="stats-title">50066</h2>
+                <p class="stats-text">Habitants</p>
+    
+              </div>
+              
+              <div class="stats-items">
+                <i id="bi" class="bi bi-houses-fill " style="font-size:36px;"></i>
+                <h2 class="stats-title">74</h2>
+                <p class="stats-text">Nombre de villages</p>
+  
+              </div>
+              
+              <div class="stats-items">
+                <i id="bi" class="bi bi-hospital-fill " style="font-size:36px;"></i>
+                <h2 class="stats-title">1</h2>
+                <p class="stats-text">Centre de santé</p>
+  
+              </div>
+              
+              <div class="stats-items">
+                <i id="bi" class="bi bi-hospital-fill " style="font-size:36px;"></i>
+                <h2 class="stats-title">5</h2>
+                <p class="stats-text">Postes de santé</p>
+  
+              </div>
+              
+              <div class="stats-items">
+                <i id="bi" class="bi bi-hospital-fill " style="font-size:36px;"></i>
+                <h2 class="stats-title">8</h2>
+                <p class="stats-text">Cases de santé</p>
+  
+              </div>
+            </div>
+          
+          
+         
+          
+
+            
+
+            
+            
+           
+
+              
+              
+          
+          
+          
+          
+          
+          
+        </div>
+
+        <div class="présentation_mairie">
+          <h2 class="about-us-title">Présentation de la Mairie</h2>
+
+          <div class="sidebar_wrapper">
+            <div class="sidebar">
+              <ul class="sidebar_list">
+                <li class="sidebar_item">
+                  <a href="#" class="sidebar_link">Liste des villages</a>
+                  
+                </li>
+                <li class="sidebar_item">
+                  <a href="#" class="sidebar_link">Situation geographique</a>
+                  
+                </li>
+                <li class="sidebar_item">
+                  <a href="#" class="sidebar_link">Relief, type de sol et pluviométrie </a>
+                  
+                </li>
+                <li class="sidebar_item">
+                  <a href="#" class="sidebar_link">Education et enseignement</a>
+                  
+                  
+                </li>
+                <li class="sidebar_item">
+                  <a href="#" class="sidebar_link">Evulution démographique</a>
+                  
+                  
+                </li>
+              </ul>
+            </div>
+  
+            <div class="sidebar_content">
+
+              <div id="tab_1">
+                <div>
+                  <table style="border:10px solid #31473A" width="100%">
+                    <colgroup width="400px">
+                    </colgroup>
+                    <colgroup width="400px">
+                    </colgroup>
+                    
+                    <tbody>
+                      <tr>
+                        <td align="center" bgcolor="#6AB187" height="97" style="border-top:2px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><b><u><font face="Arial"><font size="5"><font color="#000000">Villages</font></font></font></u></b></td>
+                        <td align="center" bgcolor="#6AB187" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><u><font face="Arial"><font size="5"><font color="#000000">Chefs de village</font></font></font></u></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Arafat</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Modou MBACKE</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Beubeunne 2</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mback&eacute; Sow</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Boul&egrave;le seck</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mor Seck</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Boustane Diagne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Diabel DIAGNE</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Cocky Gu&egrave;ye</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Serigne Gueye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Dara Diatm&eacute;</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Cheikh Leye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Dara Thiolly</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mamadou dieng</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Diop 2</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Abdou lahate leye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Diop 1</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Kosso Diop</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Krathiel</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Bassirou MBAYE</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Mousty</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Cheikh Astou faye Mback&eacute;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Ndiaye</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Thierno Ndiaye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Rahmane</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mandoumb&eacute; Diop</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Salame</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Fallou Diop</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Darou Sall</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Serigne Sall</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Diam</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mama Mor Mback&eacute;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Diatm&eacute; Diop</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mourtalla DIOP</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Diatm&eacute; Keur M. Kane</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Cheikh Kane</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Diatm&eacute; THiam&egrave;ne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ndiogou Thiam</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Dimiyate</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Path&eacute; Faye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Diory 1</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Adama Sow</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Diory 2</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Oumar B&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Diwane</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Khadim Sylla</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Fangh&eacute;</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ousmane Sy</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Goudip&egrave;ye</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Fallou Diaw</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Gu&eacute;messe</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ndongo K&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Keur Aliou Ndiaye</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Cheikh Ndiaye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Keur Bassirou Thiam</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Moustapha Diaw</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Keur Ibra Sall</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Moustapha Sall</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Keur Macoumba Fall</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Khadim DIOP</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Keur Madieumbe</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Abdou Khoudoss Ndiaye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Keur Mor Niang</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Fallou NIANG</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Keur Serigne Bara</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Dame GAYE</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Khanda</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Modou sarr</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Kont&eacute;y&eacute;ne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Omar Konteye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Lasse </font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Serigne Fall</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Madina</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ibrahima Hane</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Massar Diop</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Sawrou Diop</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Mbappe</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Aly Sow</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Mbarakane</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mor Gaye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Mbayenne Ngoulangoul</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Modou Mbaye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Mb&eacute;gu&eacute;r&eacute;</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Thierno Mb&eacute;gu&eacute;r&eacute;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Mess&eacute;r&eacute; Thiam</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Khadim Thiam</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Mb&eacute;ye Thiabouguel</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mabeye Beye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Ndame L&ocirc;</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Khadime L&ocirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Ndame Sanossy</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ameth L&ocirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Ndangou Peul</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Sidy K&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Ndangou Wolof</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Adama Sall</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Ndiba</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Dane Diba</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Ndougor</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Sileye K&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">N&eacute;bodji</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Modou Faye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Nganado Biby</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Bara Sow</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Nguiditte</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Salif K&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Sanossy</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mor Diaw</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Santhiou Tatte</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mamadou K&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Sar Sara</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Modou Kara Diop</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">S&eacute;br&eacute; Ciss&eacute;</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Moussa Ciss&eacute;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">S&eacute;br&eacute; Fack</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Abou Malick Sow</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Songhane</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ch&eacute;rif B&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Tal Tal</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Aliou Sall</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Tatte</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Mamadou B&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Thiabouguel</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ameth Sow Doula</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Thiam&eacute;ne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Modou diaw Thiam</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Thiar&eacute;ne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Fallou SARR</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Thill&eacute;ne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Modou Kara Der</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Thiolly Ngoulangoul</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Abdou Khoudoss Mbaye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Thiolly Diagne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Aliou Sylla</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Thiouky</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Babacar K&acirc;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Touba Gaye</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Cheikh Gaye</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Touba P&eacute;teigne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ba&iuml;na S&eacute;ne</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Wadd&eacute;ne</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Serigne Bara Wade</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Yari dakhar</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Ousmane Mback&eacute;</font></font></font></b></td>
+                        
+                      </tr>
+                      <tr>
+                        <td align="justify" height="33" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:2px solid #000000; border-right:1px solid #000000"><font face="Arial"><font size="4"><font color="#000000">Y&eacute;r&eacute;w</font></font></font></td>
+                        <td align="justify" style="border-top:1px solid #000000; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000"><b><font face="Calibri Light"><font size="4"><font color="#000000">Thierno Gueye</font></font></font></b></td>
+                        
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                
+  
+              </div>
+                
+  
+              </div>
+
+              <div id="tab_2">
+                <p>La commune de Daroul Mouhty qui couvre une superficie totale de 412,9 km 2, soit 25, 25% de 
+                  la superficie totale de l'arrondissement est la plus vaste. Elle est limitée : 
+                  • à l'Est par la commune de Mbadiane; 
+                  • à l'ouest par la commune de Darou Marnane;  
+                  • au nord par la commune de Sam Yabal 
+                  • au Sud par la région de Diourbel (commune de Ndame) 
+                  Le chef-lieu de la commune est situé à :  
+                  • 28 km de Touba Mosquée, sa capitale spirituelle; 
+                  • 65 km de kébémer, son chef-lieu de département; 
+                  • 72 km de Louga, son chef-lieu de région. 
+                  
+                  RELIEF, TYPE DE SOL ET PLUVIOMETRIE 
+                  
+                  Le relief est plat et la texture du sol est la même dans tout l'arrondissement de Daroul Mouhty. 
+                  Les sols sont de type Dior pour la majorité et Dior Deck pour certaines zones de cuvette et de 
+                  bas-fonds. Ils sont généralement pauvres et lessivés. 
+                  La commune de Daroul Mouhty est située dans l'isohyète comprise entre 300 et 500 mm. La 
+                  pluviométrie moyenne qui varie entre 250 et 300 mm par an, a été fluctuante pendant la 
+                  décennie (2000 - 2015). D'une année à l'autre il arrive de constater des écarts assez importants 
+                  entre les hauteurs d'eau enregistrées.  
+                  CLIMAT, VEGETATION ET FAUNE 
+                  Le climat est type soudano-sahélien caractérisé par deux saisons: Une saison sèche allant de 
+                  novembre à mai et une saison des pluies de juin à octobre. Les vents dominants qui soufflent 
+                  dans la zone sont l'harmattan, chaud et sec, l'alizé continental qui est caractérisé par des 
+                  températures basses et la mousson qui apporte la pluie. 
+                  La végétation est clairsemée et composée de trois strates : 
+                  • Une strate arborée avec prédominance d'acacia albida (Kadd), de seing, de wereck et de 
+                  Balanites aegyptiaca (Soump). Ces espèces se rencontrent un peu partout dans la 
+                  localité; 
+                  • Une strate arbustive essentiellement composée de Combretum glutinosum (ratt) et 
+                  Guiera senegalensis (nguer); 
+                  • Une strate herbacée composée de graminées. 
+                  La faune sauvage est pauvre. Elle est constituée essentiellement de Chacals, de lièvres et 
+                  d'oiseaux tels que les manges-mil, les perdrix. 
+                  
+                  HYDROGRAPHIE 
+                  
+                  Le réseau hydrographique est constitué essentiellement de quelques bas-fonds inondables 
+                  durant la saison des pluies. Ces cuvettes ne conservent pas l’eau plus de 2 mois quel que soit le 
+                  volume d’eau tombé. Il n’y a pas de cours d’eau dans la commune. 
+                  
+                  HYDROLOGIE  
+                  
+                  Les nappes phréatiques sont de nature faible. Le maestrichtien capté par la plupart des forages 
+                  renferme souvent une minéralisation importante. Le continental terminal (généralement 
+                  exploité par les puits) constitue une réserve fragile. La commune compte plusieurs forages dont 
+                  quatre dans la capitale communale.</p>
+  
+              </div>
+              <div id="tab_3">
+                <p>Le relief est plat et la texture du sol est la même dans tout l'arrondissement de Daroul Mouhty. 
+                  Les sols sont de type Dior pour la majorité et Dior Deck pour certaines zones de cuvette et de 
+                  bas-fonds. Ils sont généralement pauvres et lessivés. 
+                  La commune de Daroul Mouhty est située dans l'isohyète comprise entre 300 et 500 mm. La 
+                  pluviométrie moyenne qui varie entre 250 et 300 mm par an, a été fluctuante pendant la 
+                  décennie (2000 - 2015). D'une année à l'autre il arrive de constater des écarts assez importants 
+                  entre les hauteurs d'eau enregistrées.
+                </p>
+                
+  
+              </div>
+              <div id="tab_4">
+                <p>L'école française, l'alphabétisation dans les langues nationales et l'éducation religieuse sous les 
+                  trois formes d'éducation qui se côtoient dans la commune de Daroul Mouhty.  
+                  Dans la commune de Daroul Mouhty, la population ayant accès à une école primaire dans le  
+                  village ou à moins de trois kilomètres est de 60,2% alors que la moyenne nationale est de 78%. 
+                  La commune compte dix-neuf (19) écoles élémentaires réparties dans 15 villages différentes  
+                  avec une moyenne de 03 classes par école.   
+                  La commune de Daroul Mouhty est la plus dotée en infrastructures éducatives et scolaires de 
+                  l’arrondissement. La ville de Daroul Mouhty dispose en plus de sept écoles primaires et de trois 
+                  cases des tout-petits de deux Collèges d’Enseignement Moyen (CEM) et d’un Lycée 
+                  d’Enseignement Général.  
+                  Malgré le fort taux d’analphabétisme constaté chez les femmes, la mairie avait ouvert 20 classes 
+                  d’alphabétisation en 2015.  
+                  L’enseignement religieux, à travers les écoles coraniques et les Daaras, est très développé dans 
+                  la zone.  
+                  Le dispositif administratif fait de la localité de Daroul Mouhty, le siège de ladite commune mais 
+                  également le centre administratif des autres communes de l'arrondissement. A ce titre, elle 
+                  bénéficie d'infrastructures sanitaires plus évolués (centre de santé), et d'autres structures de 
+                  moindre envergure mais plus importantes en nombre.</p>
+                
+  
+              </div>
+              <div id="tab_5">
+                <p>Le dernier recensement national de 2013 estime la population de la commune de Daroul Mouhty 
+                  (412.9 km²) à 50 066 habitants soit une densité moyenne d’environ 92.48 hbts/km². Cette 
+                  population présente les caractéristiques suivantes : 
+                  • Hommes : 49 % et Femmes : 51 % 
+                  • Jeunes (0 à 34 ans)  77 % 
+                  • Adultes  (35 à 59 ans) 17 % 
+                  • Vieux (69 ans et plus) 6 %</p>
+  
+              </div>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+
+        
+      </section>
+
+
+      <!-- news section -->
+      
+      
+      
+
+      
+
+      
+
+       
+
+
+
+    
+
+      
+
+       
+
+        
+
+        
+         
+      
+         
+         
+
+
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const sidebarLinks = document.querySelectorAll('.sidebar_link');
+        const tabs = document.querySelectorAll('[id^="tab_"]');
+
+        // Cache tous les tabs
+        function hideAllTabs() {
+          tabs.forEach(tab => {
+            tab.style.display = 'none';
+          });
+        }
+
+        // Affiche le tab correspondant à l'élément sélectionné
+        sidebarLinks.forEach((link, index) => {
+          link.addEventListener('click', function (event) {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+            hideAllTabs(); // Cache tous les tabs
+            const tabToShow = document.querySelector(`#tab_${index + 1}`);
+            if (tabToShow) {
+              tabToShow.style.display = 'block';
+            }
+          });
+        });
+
+        // Initialiser la vue : tout cacher au début
+        hideAllTabs();
+      });
+    </script>
+    
+    <!-- LINK SCRIPT JS -->
+    <script src="scripts.js"></script>
+
+    
+
+    <footer class="footer-section">
+      <div class="section-content">
+        <p class="copyright-text"> © 2025 Mairie de Daroul mouhty</p>
+
+        <div class="social-link-list">
+          <a href="https://web.facebook.com/communedarouMouhty/photos?locale=fr_FR" class="social-link">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/communedarouMouhty/" class="social-link">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com/communedarouMouhty" class="social-link">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+
+        <p class="policy-text">
+          <a href="#" class="policy-link">Réalisation | Bluetech</a>
+          <span class="separator">-</span>
+          <a href="#" class="policy-link">Email : bleudiallo@gmail.com</a>
+        </p>
+      </div>
+
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  
+    
+ 
+</html>

@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="fr_FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents Officiels | Commune de Daroul Mouhty</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="mairie_img/logo_img.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+
+    <!-- CSS -->
+    <style>
+        :root {
+            --primary: #31473A;
+            --primary-dark: #2c5282;
+            --secondary: #6AB187;  
+            --light: #f7fafc;
+            --dark: #1a202c;
+            --gray: #718096;
+            --light-gray: #edf2f7;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            opacity: 0.9;
+        }
+
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .nav-item:hover .dropdown-content {
+            opacity: 1;
+            
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .dropdown-link:hover {
+            background-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 10rem 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('mairie_img/logo mairie.jpg') center/cover no-repeat;
+            color: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /*doc section new*/
+
+        .documents-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .document-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .document-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .document-header {
+    background: var(--secondary);
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+  }
+  
+  .document-icon {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .document-icon i {
+    color: #2b6cb0;
+    font-size: 1.5rem;
+  }
+  
+  .document-body {
+    padding: 1.5rem;
+  }
+  
+  .document-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+  }
+  
+  .document-description {
+    color: #718096;
+    margin-bottom: 1.5rem;
+  }
+  
+  .document-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #718096;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .document-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-primary {
+    background: #2b6cb0;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #2c5282;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: #2b6cb0;
+    border: 1px solid #2b6cb0;
+  }
+  
+  .btn-outline:hover {
+    background: #edf2f7;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 12px;
+    position: relative;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #2b6cb0;
+  }
+  
+  #pdfPreview {
+    width: 100%;
+    height: 70vh;
+    border: none;
+  }
+  
+  @media (max-width: 768px) {
+    .documents-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+      width: 95%;
+      margin: 10% auto;
+    }
+  }
+        
+        
+        /* Documents section */
+
+
+
+
+
+       /* .documents-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .document-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .document-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .document-header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .document-icon {
+            position: absolute;
+            top: -20px;
+            right: 20px;
+            background: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow);
+        }
+
+        .document-icon i {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .document-body {
+            padding: 1.5rem;
+        }
+
+        .document-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .document-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .document-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .document-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--light-gray);
+        }*/
+
+        /* Search and filter */
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .filter-select {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            background: white;
+            min-width: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-link {
+            display: block;
+            color: #cbd5e0;
+            text-decoration: none;
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /*.btn{
+            background: var(--primary);
+            color: white;
+            border-radius: var(--border-radius);
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }*/
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a0aec0;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 350px;
+                height: 100vh;
+                background: white;
+                flex-direction: column;
+                padding: 2rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-link {
+                color: var(--dark);
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                margin-top: 0.5rem;
+                margin-left: 1rem;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+
+            .close-menu {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 1.5rem;
+                color: var(--dark);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .document-card {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .document-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .document-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .document-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .document-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="mairie_img/logo_img.jpg" alt="Logo de la mairie" class="logo-img">
+                <span class="logo-text">Commune de Daroul Mouhty</span>
+            </div>
+
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <button class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="news.html" class="nav-link">Actualités</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="p&p.html" class="nav-link">Projets & Partenariats</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        Informations
+                        <i class="ri-arrow-down-s-line"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="etat_civil.html" class="dropdown-link">État Civil</a></li>
+                        <li><a href="docs.html" class="dropdown-link">Documentations</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a href="Galleries.html" class="nav-link">Galerie</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h1>Documents Officiels</h1>
+            <p>Accédez à tous les documents administratifs de la commune</p>
+        </section>
+
+        <section id="documents">
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Rechercher un document...">
+                </div>
+
+                <select class="filter-select" id="categoryFilter">
+                    <option value="">Toutes les catégories</option>
+                    <option value="budget">Budgets</option>
+                    <option value="rapport">Rapports</option>
+                    <option value="arrete">Arrêtés</option>
+                    <option value="administration">Administratif</option>
+                </select>
+
+                <select class="filter-select" id="yearFilter">
+                    <option value="">Toutes les années</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+
+            <div class="documents-container">
+                <!-- Document 1 : Démarches Administratives -->
+                <div class="document-card">
+                    <div class="document-header">
+                        <h2 class="document-title">Démarches Administratives</h2>
+                        <div class="document-icon">
+                            <i class="ri-file-text-line"></i>
+                        </div>
+                    </div>
+                    <div class="document-body">
+                        <p class="document-description">
+                            Guide complet des procédures administratives disponibles à la mairie (état civil,
+                            certificats, autorisations, etc.).
+                        </p>
+                        <div class="document-meta">
+                            <span><i class="ri-calendar-line"></i> Mise à jour 2024</span>
+                            <span><i class="ri-file-text-line"></i> PDF - 1.2MB</span>
+                        </div>
+                        <div class="document-actions">
+                            <a href="documents/démarches administratives.pdf" class="btn btn-primary"
+                                download="Démarches_Administratives_Daroul_Mouhty.pdf">
+                                <i class="ri-download-line"></i> Télécharger
+                            </a>
+                            <button class="btn btn-outline preview-btn"
+                                data-file="documents/démarches administratives.pdf">
+                                <i class="ri-eye-line"></i> Prévisualiser
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 2 : Impôt Minimum Fiscal -->
+                <div class="document-card">
+                    <div class="document-header">
+                        <h2 class="document-title">Impôt Minimum Fiscal 2017-2024</h2>
+                        <div class="document-icon">
+                            <i class="ri-file-chart-line"></i>
+                        </div>
+                    </div>
+                    <div class="document-body">
+                        <p class="document-description">
+                            Révision des taxes municipales par village de 2017 à 2024 avec détails par année et par
+                            localité.
+                        </p>
+                        <div class="document-meta">
+                            <span><i class="ri-calendar-line"></i> 2024</span>
+                            <span><i class="ri-file-text-line"></i> PDF - 0.8MB</span>
+                        </div>
+                        <div class="document-actions">
+                            <a href="documents/impot minimum fiscale 2017 à 2024 revision.pdf" class="btn btn-primary"
+                                download="Impôt_Minimum_Fiscal_2017-2024.pdf">
+                                <i class="ri-download-line"></i> Télécharger
+                            </a>
+                            <button class="btn btn-outline preview-btn"
+                                data-file="documents/impot minimum fiscale 2017 à 2024 revision.pdf">
+                                <i class="ri-eye-line"></i> Prévisualiser
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 3 : Présentation de la Mairie -->
+                <div class="document-card">
+                    <div class="document-header">
+                        <h2 class="document-title">Présentation de la Mairie</h2>
+                        <div class="document-icon">
+                            <i class="ri-government-line"></i>
+                        </div>
+                    </div>
+                    <div class="document-body">
+                        <p class="document-description">
+                            Document officiel présentant la commune, son histoire, son organisation et ses projets de
+                            développement.
+                        </p>
+                        <div class="document-meta">
+                            <span><i class="ri-calendar-line"></i> 2023</span>
+                            <span><i class="ri-file-text-line"></i> PDF - 2.1MB</span>
+                        </div>
+                        <div class="document-actions">
+                            <a href="documents/Présentation de la Mairie VO.pdf" class="btn btn-primary"
+                                download="Présentation_Mairie_Daroul_Mouhty.pdf">
+                                <i class="ri-download-line"></i> Télécharger
+                            </a>
+                            <button class="btn btn-outline preview-btn"
+                                data-file="documents/Présentation de la Mairie VO.pdf">
+                                <i class="ri-eye-line"></i> Prévisualiser
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Document 4 : Proposition de Commissions -->
+                <div class="document-card">
+                    <div class="document-header">
+                        <h2 class="document-title">Commissions Municipales</h2>
+                        <div class="document-icon">
+                            <i class="ri-team-line"></i>
+                        </div>
+                    </div>
+                    <div class="document-body">
+                        <p class="document-description">
+                            Composition et organisation des commissions techniques du Conseil Municipal selon la loi sur
+                            les collectivités locales.
+                        </p>
+                        <div class="document-meta">
+                            <span><i class="ri-calendar-line"></i> 2022</span>
+                            <span><i class="ri-file-text-line"></i> PDF - 0.5MB</span>
+                        </div>
+                        <div class="document-actions">
+                            <a href="documents/Proposition commission.pdf" class="btn btn-primary"
+                                download="Commissions_Municipales_Daroul_Mouhty.pdf">
+                                <i class="ri-download-line"></i> Télécharger
+                            </a>
+                            <button class="btn btn-outline preview-btn"
+                                data-file="documents/Proposition commission.pdf">
+                                <i class="ri-eye-line"></i> Prévisualiser
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Commune de Daroul Mouhty</h3>
+                <p>Service public au cœur de la communauté depuis 1985.</p>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Liens utiles</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Portail des services</a></li>
+                    <li><a href="#" class="footer-link">Agenda des événements</a></li>
+                    <li><a href="#" class="footer-link">Marchés publics</a></li>
+                    <li><a href="#" class="footer-link">Urbanisme</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><i class="ri-map-pin-line"></i> Rue Principale, Daroul Mouhty</li>
+                    <li><i class="ri-phone-line"></i> +221 33 123 45 67</li>
+                    <li><i class="ri-mail-line"></i> contact@daroulmouhty.sn</li>
+                    <li><i class="ri-time-line"></i> Lun-Ven: 8h-16h</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Commune de Daroul Mouhty. Tous droits réservés.</p>
+            <p>Réalisé par <a href="#" style="color: var(--primary);">Bluetech</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal pour prévisualisation des PDF -->
+<div id="previewModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <iframe id="pdfPreview" frameborder="0"></iframe>
+  </div>
+</div>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Menu mobile
+            const menuToggle = document.getElementById('menuToggle');
+            const closeMenu = document.getElementById('closeMenu');
+            const navMenu = document.getElementById('navMenu');
+
+            menuToggle.addEventListener('click', () => {
+                navMenu.classList.add('active');
+            });
+
+            closeMenu.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+
+            // Dropdown mobile
+            const dropdowns = document.querySelectorAll('.dropdown > .nav-link');
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('click', function (e) {
+                    if (window.innerWidth < 992) {
+                        e.preventDefault();
+                        const parent = this.parentElement;
+                        parent.classList.toggle('active');
+                    }
+                });
+            });
+
+            // Téléchargement de documents
+            const downloadButtons = document.querySelectorAll('.download-btn');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const fileUrl = this.getAttribute('/');
+                    const fileName = fileUrl.split('/').pop();
+
+                    // Créer un indicateur de chargement
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="ri-loader-4-line spin"></i> Téléchargement...';
+                    this.disabled = true;
+
+                    // Simuler un téléchargement (remplacer par une vraie requête)
+                    setTimeout(() => {
+                        const link = document.createElement('a');
+                        link.href = fileUrl;
+                        link.download = fileName;
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+
+                        // Réinitialiser le bouton
+                        this.innerHTML = originalText;
+                        this.disabled = false;
+
+                        // Notification
+                        showNotification('Téléchargement commencé', 'success');
+                    }, 1500);
+                });
+            });
+
+            // Prévisualisation de documents
+            const previewButtons = document.querySelectorAll('.preview-btn');
+            const modal = document.getElementById('previewModal');
+            const closeModal = document.querySelector('.close-modal');
+            const pdfPreview = document.getElementById('pdfPreview');
+
+            previewButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const fileUrl = this.getAttribute('data-file');
+                    pdfPreview.src = `https://docs.google.com/viewer?url=${encodeURIComponent(window.location.origin + '/' + fileUrl)}&embedded=true`;
+                    modal.style.display = 'block';
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+                pdfPreview.src = '';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    pdfPreview.src = '';
+                }
+            });
+
+            // Filtrage des documents
+            const categoryFilter = document.getElementById('categoryFilter');
+            const yearFilter = document.getElementById('yearFilter');
+            const searchInput = document.querySelector('.search-input');
+            const documentCards = document.querySelectorAll('.document-card');
+
+            function filterDocuments() {
+                const categoryValue = categoryFilter.value.toLowerCase();
+                const yearValue = yearFilter.value;
+                const searchValue = searchInput.value.toLowerCase();
+
+                documentCards.forEach(card => {
+                    const title = card.querySelector('.document-title').textContent.toLowerCase();
+                    const year = card.querySelector('.document-meta span:first-child').textContent;
+                    const matchesCategory = categoryValue === '' ||
+                        (title.includes(categoryValue) ||
+                            card.querySelector('.document-icon i').className.includes(categoryValue));
+                    const matchesYear = yearValue === '' || year.includes(yearValue);
+                    const matchesSearch = searchValue === '' || title.includes(searchValue) ||
+                        card.querySelector('.document-description').textContent.toLowerCase().includes(searchValue);
+
+                    if (matchesCategory && matchesYear && matchesSearch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            categoryFilter.addEventListener('change', filterDocuments);
+            yearFilter.addEventListener('change', filterDocuments);
+            searchInput.addEventListener('input', filterDocuments);
+
+            // Fonction de notification
+            function showNotification(message, type) {
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.textContent = message;
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 10);
+
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+
+            // Animation du spinner
+            const style = document.createElement('style');
+            style.textContent = `
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .spin {
+          animation: spin 1s linear infinite;
+        }
+        
+        /* Modal */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-content {
+          background: white;
+          margin: 5% auto;
+          padding: 20px;
+          width: 90%;
+          max-width: 900px;
+          border-radius: var(--border-radius);
+          position: relative;
+        }
+        
+        .close-modal {
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        
+        #pdfPreview {
+          width: 100%;
+          height: 70vh;
+        }
+        
+        /* Notification */
+        .notification {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          padding: 15px 25px;
+          border-radius: var(--border-radius);
+          color: white;
+          transform: translateY(100px);
+          opacity: 0;
+          transition: all 0.3s ease;
+          z-index: 1000;
+        }
+        
+        .notification.show {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        
+        .notification.success {
+          background: var(--primary);
+        }
+        
+        .notification.error {
+          background: var(--secondary);
+        }
+      `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+
+</html>

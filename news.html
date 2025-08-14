@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="fr_FR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actualités - Commune de Daroul Mouhty</title>
+    
+    <link rel="icon" href="mairie_img/logo_img.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    
+    <style>
+        :root {
+            --primary-color: #31473A;
+            --secondary-color: #6AB187;
+            --accent-color: #EDF4F2;
+            --text-color: #333;
+            --light-text: #777;
+            --white: #fff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .news-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('mairie_img/homepage10.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .news-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .news-header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .news-container {
+            padding: 0 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .news-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border: 1px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .news-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            background: var(--white);
+        }
+        
+        .news-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .news-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 20px;
+        }
+        
+        .news-date {
+            display: block;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .news-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .news-excerpt {
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .read-more {
+            display: inline-block;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: var(--primary-color);
+        }
+        
+        .news-modal .modal-content {
+            border-radius: 10px;
+            border: none;
+        }
+        
+        .modal-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .modal-date {
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+        
+        .pagination {
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .page-link {
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            margin: 0 5px;
+        }
+        
+        .page-link:hover, .page-item.active .page-link {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        
+        .newsletter-section {
+            background: var(--accent-color);
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+        
+        .newsletter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .newsletter-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 30px 0 0 30px;
+            outline: none;
+        }
+        
+        .newsletter-btn {
+            padding: 0 25px;
+            background: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .newsletter-btn:hover {
+            background: var(--primary-color);
+        }
+        
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .news-header {
+                padding: 70px 0;
+            }
+            
+            .news-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-input {
+                border-radius: 30px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-btn {
+                border-radius: 30px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="mairie_img/logo_img.jpg" alt="Logo Mairie">
+                <span>Commune de Daroul Mouhty</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="actualites.html">Actualités</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="realisation.html">Réalisations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Header -->
+    <section class="news-header">
+        <div class="container">
+            <h1>Actualités de la Commune</h1>
+            <p>Restez informé des dernières nouvelles et activités de la mairie de Daroul Mouhty</p>
+        </div>
+    </section>
+
+    <!-- News Filters -->
+    <div class="news-container">
+        <div class="news-filters">
+            <button class="filter-btn active" data-filter="all">Toutes les actualités</button>
+            <button class="filter-btn" data-filter="events">Événements</button>
+            <button class="filter-btn" data-filter="projects">Projets</button>
+            <button class="filter-btn" data-filter="announcements">Annonces</button>
+        </div>
+
+        <!-- News Grid -->
+        <div class="news-grid">
+            <!-- News Card 1 -->
+            <div class="news-card" data-category="events">
+                <img src="mairie_img/ACTU11.jpg" alt="Actualité" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">08 Avril 2025 / Événement</span>
+                    <h3 class="news-title">Journées portes ouvertes sur l'état civil</h3>
+                    <p class="news-excerpt">Vendredi 04 Avril 2025, deuxième jour des journées portes ouvertes, les élèves et particulièrement les tout petits, ont marqué le défilé avec des messages sur les enregistrements des faits d'état civil.</p>
+                    <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#newsModal1">Lire la suite</a>
+                </div>
+            </div>
+
+            <!-- News Card 2 -->
+            <div class="news-card" data-category="events">
+                <img src="mairie_img/ACTU10.jpg" alt="Actualité" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">07 Avril 2025 / Événement</span>
+                    <h3 class="news-title">Rencontre avec les chefs de village</h3>
+                    <p class="news-excerpt">3ème jour des journées portes ouvertes: rencontre en présence du sous-préfet de l'arrondissement avec les 73 chefs de village de la commune pour une séance de sensibilisation sur les déclarations des faits de l'état civil.</p>
+                    <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#newsModal2">Lire la suite</a>
+                </div>
+            </div>
+
+            <!-- News Card 3 -->
+            <div class="news-card" data-category="events">
+                <img src="mairie_img/ACTU9.jpg" alt="Actualité" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">07 Avril 2025 / Événement</span>
+                    <h3 class="news-title">Premier jour des portes ouvertes</h3>
+                    <p class="news-excerpt">Jeudi 03 Avril 2025, premier jour des journées portes ouvertes sur l'état civil, plus de 1100 personnes enrolées par le tribunal départemental de kébémer pour des jugements supplétifs.</p>
+                    <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#newsModal3">Lire la suite</a>
+                </div>
+            </div>
+
+            <!-- News Card 4 -->
+            <div class="news-card" data-category="announcements">
+                <img src="mairie_img/ACTU8.jpg" alt="Actualité" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">05 Avril 2025 / Annonce</span>
+                    <h3 class="news-title">Reconnaissance du mérite citoyen</h3>
+                    <p class="news-excerpt">En marge de la fête nationale, la mairie a reconnu le mérite de plusieurs citoyens pour leur engagement envers la communauté.</p>
+                    <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#newsModal4">Lire la suite</a>
+                </div>
+            </div>
+
+            <!-- News Card 5 -->
+            <div class="news-card" data-category="projects">
+                <img src="mairie_img/ACTU7.jpg" alt="Actualité" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">02 Avril 2025 / Projet</span>
+                    <h3 class="news-title">Subventions pour les étudiants</h3>
+                    <p class="news-excerpt">Le maire a remis ce mercredi 02 Avril 2025 les subventions annuelles aux amicales des étudiants des universités de Ziguinchor, Bambey, Matam, Sine Saloum et Thies.</p>
+                    <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#newsModal5">Lire la suite</a>
+                </div>
+            </div>
+
+            <!-- News Card 6 -->
+            <div class="news-card" data-category="projects">
+                <img src="mairie_img/actu1.jpg" alt="Actualité" class="news-img">
+                <div class="news-content">
+                    <span class="news-date">04 Mars 2025 / Projet</span>
+                    <h3 class="news-title">Dotation en matériel informatique</h3>
+                    <p class="news-excerpt">Ce Mardi 04 mars 2025, une délégation de la mairie composée de conseillers municipaux a remis trois ordinateurs de bureau au proviseur du lycée Mame Thierno Birahim MBACKE de Daroul Mouhty.</p>
+                    <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#newsModal6">Lire la suite</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Précédent</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Suivant</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2 class="newsletter-title">Abonnez-vous à notre newsletter</h2>
+            <p>Recevez les dernières actualités de la mairie directement dans votre boîte mail.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Votre adresse email" required>
+                <button type="submit" class="newsletter-btn">S'abonner</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- News Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="newsModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img src="mairie_img/ACTU11.jpg" class="modal-img" alt="Actualité">
+                <div class="modal-body">
+                    <span class="modal-date">08 Avril 2025 / Événement</span>
+                    <h3>Journées portes ouvertes sur l'état civil</h3>
+                    <p>Vendredi 04 Avril 2025 et deuxième jour des journées portes ouvertes, les élèves et particulièrement les tout petits, ont marqué le défilé avec des messages sur les enregistrements des faits d'état civil. Cet événement a permis de sensibiliser la population sur l'importance de déclarer les naissances, mariages et décès dans les délais légaux.</p>
+                    <p>Le maire Madiop Biteye a souligné l'engagement de la mairie à faciliter les démarches administratives pour tous les citoyens. Des agents de l'état civil étaient présents pour répondre aux questions et aider les citoyens dans leurs démarches.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="newsModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img src="mairie_img/ACTU10.jpg" class="modal-img" alt="Actualité">
+                <div class="modal-body">
+                    <span class="modal-date">07 Avril 2025 / Événement</span>
+                    <h3>Rencontre avec les chefs de village</h3>
+                    <p>3ème jour des journées portes ouvertes: rencontre en présence du sous préfet de l'arrondissement avec les 73 chefs de village de la commune pour une séance de sensibilisation sur les déclarations des faits de l'état civil.</p>
+                    <p>Cette rencontre a permis d'expliquer en détail le processus d'enregistrement des actes d'état civil et le rôle crucial que jouent les chefs de village dans la sensibilisation de leurs communautés. Des kits d'information ont été distribués à tous les participants.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="newsModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img src="mairie_img/ACTU9.jpg" class="modal-img" alt="Actualité">
+                <div class="modal-body">
+                    <span class="modal-date">07 Avril 2025 / Événement</span>
+                    <h3>Premier jour des portes ouvertes</h3>
+                    <p>Jeudi 03 Avril 2025, premier jour des journées portes ouvertes sur l'état civil, plus de 1100 personnes enrolées par le tribunal départemental de kébémer pour des jugements supplétifs.</p>
+                    <p>Cette initiative a permis à de nombreux citoyens de régulariser leur situation administrative. Les services de la mairie ont travaillé en étroite collaboration avec le tribunal pour accélérer les procédures et réduire les délais d'attente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="newsModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img src="mairie_img/ACTU8.jpg" class="modal-img" alt="Actualité">
+                <div class="modal-body">
+                    <span class="modal-date">05 Avril 2025 / Annonce</span>
+                    <h3>Reconnaissance du mérite citoyen</h3>
+                    <p>En marge de la fête nationale, la mairie a reconnu le mérite de M. Habib CISSÉ, Ancien président de l'APE, M. Modou kaba GAYE gestionnaire de la morgue et M. Demba NDIAYE qui en plein hivernage avait remis son champs à la mairie pour la construction du poste de santé de keur Aliou NDIAYE.</p>
+                    <p>Ils ont été décorés lors de la rencontre de sensibilisation des chefs de village sur l'état civil dont des journées portes ouvertes sont en cours dans la commune de Daroul Mouhty. Cette cérémonie visait à honorer les citoyens qui contribuent activement au développement de la commune.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 5 -->
+    <div class="modal fade" id="newsModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img src="mairie_img/ACTU7.jpg" class="modal-img" alt="Actualité">
+                <div class="modal-body">
+                    <span class="modal-date">02 Avril 2025 / Projet</span>
+                    <h3>Subventions pour les étudiants</h3>
+                    <p>Le maire a remis ce mercredi 02 Avril 2025 les subventions annuelles aux amicales des étudiants des universités de Ziguinchor, Bambey, Matam, Sine Saloum et Thies.</p>
+                    <p>Cette initiative s'inscrit dans le cadre du programme d'appui à l'éducation de la mairie, qui vise à soutenir les étudiants originaires de la commune dans leur parcours universitaire. Les fonds alloués permettront d'améliorer les conditions de vie et d'étude des bénéficiaires.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="modal fade" id="newsModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <img src="mairie_img/actu1.jpg" class="modal-img" alt="Actualité">
+                <div class="modal-body">
+                    <span class="modal-date">04 Mars 2025 / Projet</span>
+                    <h3>Dotation en matériel informatique</h3>
+                    <p>Ce Mardi 04 mars 2025, une délégation de la mairie composée de conseillers municipaux a remis trois ordinateurs de bureau au proviseur du lycée Mame Thierno Birahim MBACKE de Daroul Mouhty.</p>
+                    <p>Cette dotation s'inscrit dans le cadre du projet "École numérique" initié par la mairie pour moderniser les infrastructures éducatives de la commune. Les ordinateurs permettront d'améliorer l'enseignement de l'informatique et faciliteront l'accès aux ressources pédagogiques numériques.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Accueil</a>
+                <a href="actualites.html">Actualités</a>
+                <a href="realisation.html">Réalisations</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-links">
+                <a href="https://web.facebook.com/communedarouMouhty/photos?locale=fr_FR"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/communedarouMouhty/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/communedarouMouhty"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>© 2025 Mairie de Daroul Mouhty - Tous droits réservés</p>
+            <p>Réalisation : Bluetech - Email : bleudiallo@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Filtrage des actualités
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const newsCards = document.querySelectorAll('.news-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Active le bouton sélectionné
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filtre les cartes
+                    newsCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Animation au chargement
+            setTimeout(() => {
+                newsCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr_FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Formulaire de demande d'acte d'état civil - Commune de Daroul Mouhty">
+    <title>Demande d'état civil - Commune de Daroul Mouhty</title>
+
+    <!-- Preload des polices critiques -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></noscript>
+
+    <!-- Chargement optimisé des CSS -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles-etatcivil.css">
+    
+
+    <!-- Favicon optimisé -->
+    <link rel="icon" href="mairie_img/logo_img.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="mairie_img/logo_img.jpg">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+    
+    <header class="header_ec" aria-label="En-tête principal">
+      <nav id="navmenu" class="navbar" aria-label="Navigation principale">
+        <div class="logo_wrapper">
+          <a href="index.html" class="nav-logo">
+            <img src="mairie_img/logo_img.jpg" alt="Logo de la mairie de Daroul Mouhty" class="logo_mairie" width="50" height="50">
+            <h1 class="logo-text">Commune de Daroul<br>Mouhty</br></h1>
+          </a>
+        </div>
+        
+        <button id="menu-open-button" class="fas fa-bars" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu-list"></button>
+        
+        <ul id="nav-menu-list" class="nav-menu">
+          <li class="nav-item">
+            <button id="menu-close-button" class="fas fa-times" aria-label="Fermer le menu"></button>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a href="index.html" class="nav-link">Accueil<i class="ri-arrow-down-s-line" aria-hidden="true"></i></a>
+              <ul class="dropdown-content" role="menu">
+                <li>
+                  <a class="dropdown-link">LA MAIRIE<i class="ri-arrow-right-s-line" aria-hidden="true"></i></a>
+                  <div class="dropdown-content1">
+                    <ul>
+                      <li><a href="#mot_du_maire" class="dropdown-link">MOT DU MAIRE</a></li>
+                      <li><a href="#conseil_municipal" class="dropdown-link">LE CONSEIL MUNICIPAL</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="#About" class="dropdown-link">LA COMMUNE</a></li>
+                <li><a href="news.html" class="dropdown-link">ACTUALITÉS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="realisations.html" class="nav-link">Réalisations</a>
+          </li>
+          <li class="nav-item">
+            <a href="p&p.html" class="nav-link">Projet & Partenariat</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a href="docs.html" class="nav-link">Informations<i class="ri-arrow-down-s-line" aria-hidden="true"></i></a>
+              <ul class="dropdown-content" role="menu">
+                <li><a href="docs.html" class="dropdown-link">Etat civil</a></li>
+                <li><a href="#budgets" class="dropdown-link">Documentations</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="Galleries.html" class="nav-link">Galleries</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a href="GESTION-DE-DEMANDE.html" class="nav-link">Gestion des demandes</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="etat-civil" aria-labelledby="etat-civil-title">
+        <h2 id="etat-civil-title" class="etat-civil-title">Demande d'état civil</h2>
+        
+        <div class="info-box" role="alert">
+          <h3><i class="fas fa-info-circle" aria-hidden="true"></i> <span>Informations importantes</span></h3>
+          <p>Veuillez remplir ce formulaire pour faire une demande d'acte d'état civil. Les champs marqués d'un astérisque (*) sont obligatoires. Le traitement de votre demande peut prendre jusqu'à 5 jours ouvrables.</p>
+        </div>
+        
+        <div class="form-container">
+          <form id="etatCivilForm" method="post" enctype="multipart/form-data" novalidate>
+            
+            <div class="form-group">
+              <label for="fullName" class="required">Nom complet <span class="sr-only">(obligatoire)</span></label>
+              <input type="text" id="fullName" name="fullName" placeholder="Entrez votre nom complet" required
+                     aria-required="true" pattern="[A-Za-zÀ-ÿ\s\-]{2,}">
+              <span class="error-message" id="fullName-error" aria-live="polite"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="birthDate" class="required">Date de naissance <span class="sr-only">(obligatoire)</span></label>
+              <input type="date" id="birthDate" name="birthDate" required
+                     aria-required="true" max="">
+              <span class="error-message" id="birthDate-error" aria-live="polite"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="documentType" class="required">Type de document <span class="sr-only">(obligatoire)</span></label>
+              <select id="documentType" name="documentType" required aria-required="true">
+                <option value="">-- Sélectionnez un document --</option>
+                <option value="Acte de naissance">Acte de naissance</option>
+                <option value="Acte de mariage">Acte de mariage</option>
+                <option value="Acte de décès">Acte de décès</option>
+                <option value="Autres">Autres</option>
+              </select>
+              <span class="error-message" id="documentType-error" aria-live="polite"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Téléphone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro de téléphone"
+                     pattern="[\+0-9\s\-]{10,}">
+              <span class="error-message" id="phone-error" aria-live="polite"></span>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="email" class="required">Email <span class="sr-only">(obligatoire)</span></label>
+              <input type="email" id="email" name="email" placeholder="Entrez votre email" required
+                     aria-required="true">
+              <span class="error-message" id="email-error" aria-live="polite"></span>
+            </div>
+            
+            <div class="form-group full-width" id="otherDocTypeContainer" style="display:none;">
+              <label for="otherDocType">Précisez le type de document</label>
+              <input type="text" id="otherDocType" name="otherDocType" placeholder="Précisez le type de document demandé">
+              <span class="error-message" id="otherDocType-error" aria-live="polite"></span>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="message">Autres demandes ou informations complémentaires</label>
+              <textarea id="message" name="message" placeholder="Décrivez votre demande en détails si nécessaire"></textarea>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="fileUpload">Pièce jointe (facultatif)</label>
+              <div class="file-upload">
+                <label class="file-upload-label" for="fileUpload">
+                  <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i> <span>Cliquez pour téléverser un document</span>
+                  <span id="fileName" class="file-name"></span>
+                </label>
+                <input type="file" id="fileUpload" name="fileUpload" class="file-upload-input" 
+                       accept=".pdf,.jpg,.jpeg,.png" aria-describedby="fileUploadHelp">
+              </div>
+              <small id="fileUploadHelp">Formats acceptés: PDF, JPG, PNG (max 5MB)</small>
+              <span class="error-message" id="fileUpload-error" aria-live="polite"></span>
+            </div>
+            
+            <div class="form-group full-width">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="consent" name="consent" required
+                       aria-required="true">
+                <label class="form-check-label" for="consent" class="required">
+                  J'accepte le traitement de mes données personnelles conformément à la <a href="politique-confidentialite.html" target="_blank">politique de confidentialité</a> <span class="sr-only">(obligatoire)</span>
+                </label>
+              </div>
+              <span class="error-message" id="consent-error" aria-live="polite"></span>
+            </div>
+            
+            <button type="submit" class="submit-button">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> <span>Envoyer la demande</span>
+            </button>
+          </form>
+          
+          <div id="confirmationMessage" class="hidden" role="alert" aria-live="polite">
+            <i class="fas fa-check-circle" aria-hidden="true"></i>
+            <h3>Merci ! Votre demande a été soumise avec succès.</h3>
+            <p>Un email de confirmation vous a été envoyé. Nous traiterons votre demande dans les plus brefs délais.</p>
+            <p>Numéro de suivi: <strong id="trackingNumber"></strong></p>
+            <a href="index.html" class="btn btn-primary mt-3">
+              <i class="fas fa-home" aria-hidden="true"></i> <span>Retour à l'accueil</span>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Fenêtre modale de confirmation -->
+        <div id="confirmationModal" class="modal hidden" role="dialog" aria-labelledby="confirmationModalTitle" aria-describedby="confirmationModalDescription">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 id="confirmationModalTitle">Confirmation de demande</h3>
+              <button id="closeModal" class="close-button" aria-label="Fermer">&times;</button>
+            </div>
+            <div id="confirmationModalDescription" class="modal-body">
+              <p><i class="fas fa-check-circle success-icon"></i> Votre demande a été soumise avec succès !</p>
+              <p>Un email de confirmation a été envoyé à l'adresse indiquée dans le formulaire.</p>
+              <p>Numéro de suivi: <strong id="modalTrackingNumber"></strong></p>
+              <p>Veuillez conserver ce numéro pour suivre l'état de votre demande.</p>
+            </div>
+            <div class="modal-footer">
+              <button id="closeModalButton" class="btn btn-primary">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section" aria-label="Pied de page">
+      <div class="section-content">
+        <p class="copyright-text"> © 2025 Mairie de Daroul mouhty</p>
+
+        <div class="social-link-list">
+          <a href="https://web.facebook.com/communedaroumousty/photos?locale=fr_FR" class="social-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/communedaroumousty/" class="social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/communedaroumousty" class="social-link" aria-label="Twitter">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <p class="policy-text">
+          <a href="#" class="policy-link">Réalisation | Bluetech</a>
+          <span class="separator" aria-hidden="true">-</span>
+          <a href="mailto:bleudiallo@gmail.com" class="policy-link">Email : bleudiallo@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+    
+   <!-- Chargement différé des scripts non critiques -->
+<script>
+
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    // Gestion améliorée du menu mobile
+    const menuOpenButton = document.getElementById('menu-open-button');
+    const menuCloseButton = document.getElementById('menu-close-button');
+    const navMenu = document.getElementById('nav-menu-list');
+    const body = document.body;
+
+    function openMenu() {
+      navMenu.classList.add('active');
+      body.classList.add('menu-open');
+      menuOpenButton.setAttribute('aria-expanded', 'true');
+      menuCloseButton.style.display = 'block';
+      menuOpenButton.style.display = 'none';
+    }
+
+    function closeMenu() {
+      navMenu.classList.remove('active');
+      body.classList.remove('menu-open');
+      menuOpenButton.setAttribute('aria-expanded', 'false');
+      menuCloseButton.style.display = 'none';
+      menuOpenButton.style.display = 'block';
+    }
+
+    if (menuOpenButton && menuCloseButton && navMenu) {
+      menuOpenButton.addEventListener('click', openMenu);
+      menuCloseButton.addEventListener('click', closeMenu);
+
+      // Fermer le menu en cliquant à l'extérieur
+      document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && 
+            !e.target.closest('#nav-menu-list') && 
+            !e.target.closest('#menu-open-button')) {
+          closeMenu();
+        }
+      });
+
+      // Fermer le menu avec la touche Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          closeMenu();
+        }
+      });
+
+      // Fermer le menu après un clic sur un lien (mobile seulement)
+      const navLinks = navMenu.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 992) {
+            closeMenu();
+          }
+        });
+      });
+    }
+
+    // [Le reste de votre code JavaScript existant...]
+    // Gestion du formulaire d'état civil
+    const form = document.getElementById('etatCivilForm');
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    const documentType = document.getElementById('documentType');
+    const otherDocTypeContainer = document.getElementById('otherDocTypeContainer');
+
+    // Afficher/masquer le champ "Autre type de document"
+    if (documentType && otherDocTypeContainer) {
+      documentType.addEventListener('change', function() {
+        otherDocTypeContainer.style.display = this.value === 'Autres' ? 'block' : 'none';
+      });
+    }
+
+    // [Continuez avec le reste de votre code JavaScript existant...]
+  });
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Gestion du menu mobile
+    const menuOpenButton = document.getElementById('menu-open-button');
+    const menuCloseButton = document.getElementById('menu-close-button');
+    const navMenu = document.getElementById('nav-menu-list');
+
+    if (menuOpenButton && menuCloseButton && navMenu) {
+      menuOpenButton.addEventListener('click', () => {
+        navMenu.classList.add('active');
+        menuOpenButton.setAttribute('aria-expanded', 'true');
+      });
+
+      menuCloseButton.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        menuOpenButton.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    // mobbile
+
+    document.addEventListener('DOMContentLoaded', function() {
+  // Gestion du menu mobile - Version améliorée
+  const menuOpenButton = document.getElementById('menu-open-button');
+  const menuCloseButton = document.getElementById('menu-close-button');
+  const navMenu = document.getElementById('nav-menu-list');
+
+  if (menuOpenButton && menuCloseButton && navMenu) {
+    // Fonction pour ouvrir le menu
+    const openMenu = () => {
+      navMenu.classList.add('active');
+      menuOpenButton.setAttribute('aria-expanded', 'true');
+      menuCloseButton.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden'; // Empêche le défilement de la page
+    };
+
+    // Fonction pour fermer le menu
+    const closeMenu = () => {
+      navMenu.classList.remove('active');
+      menuOpenButton.setAttribute('aria-expanded', 'false');
+      menuCloseButton.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = ''; // Rétablit le défilement
+    };
+
+    // Événements d'ouverture/fermeture
+    menuOpenButton.addEventListener('click', openMenu);
+    menuCloseButton.addEventListener('click', closeMenu);
+
+    // Fermer le menu en cliquant à l'extérieur
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active') && 
+          !e.target.closest('#nav-menu-list') && 
+          !e.target.closest('#menu-open-button')) {
+        closeMenu();
+      }
+    });
+
+    // Fermer le menu lors de la navigation (pour les liens)
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 992) { // Seulement en mode mobile
+          closeMenu();
+        }
+      });
+    });
+
+    // Fermer le menu avec la touche Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+  }
+
+  
+});
+
+    // mobile fin
+
+    // Gestion du formulaire d'état civil
+    const form = document.getElementById('etatCivilForm');
+    const confirmationMessage = document.getElementById('confirmationMessage');
+    const documentType = document.getElementById('documentType');
+    const otherDocTypeContainer = document.getElementById('otherDocTypeContainer');
+
+    // Afficher/masquer le champ "Autre type de document"
+    if (documentType && otherDocTypeContainer) {
+      documentType.addEventListener('change', function() {
+        otherDocTypeContainer.style.display = this.value === 'Autres' ? 'block' : 'none';
+      });
+    }
+
+    // Gestion de l'upload de fichier
+    const fileUpload = document.getElementById('fileUpload');
+    const fileName = document.getElementById('fileName');
+
+    if (fileUpload && fileName) {
+      fileUpload.addEventListener('change', function() {
+        if (this.files.length > 0) {
+          fileName.textContent = this.files[0].name;
+        } else {
+          fileName.textContent = '';
+        }
+      });
+    }
+
+    // Validation et envoi du formulaire
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Validation des champs
+        if (!validateForm()) {
+          return;
+        }
+
+        // Création de l'objet FormData
+        const formData = new FormData(form);
+        
+        try {
+          // Envoi des données au serveur
+          const response = await fetch('/etat-civil', {
+            method: 'POST',
+            body: formData
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            showConfirmation(result.trackingNumber);
+            
+            // Envoyer un email de confirmation
+            const email = document.getElementById('email').value;
+            const fullName = document.getElementById('fullName').value;
+            sendConfirmationEmail(email, fullName, result.trackingNumber);
+          } else {
+            throw new Error('Erreur lors de la soumission du formulaire');
+          }
+        } catch (error) {
+          console.error('Erreur:', error);
+          alert("Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer.");
+        }
+      });
+    }
+    
+    // Fonction pour envoyer un email de confirmation
+    function sendConfirmationEmail(email, fullName, trackingNumber) {
+      // Dans une application réelle, cette fonction enverrait une requête à un serveur
+      // qui gérerait l'envoi de l'email. Ici, nous simulons cette fonctionnalité.
+      console.log(`Envoi d'un email de confirmation à ${email}`);
+      console.log(`Nom: ${fullName}`);
+      console.log(`Numéro de suivi: ${trackingNumber}`);
+      
+      // Simulation de l'envoi de l'email
+      // Dans une application réelle, vous utiliseriez un service d'email comme:
+      // - Nodemailer (Node.js)
+      // - SendGrid
+      // - Amazon SES
+      // - Mailgun
+      // etc.
+    }
+
+    // Fonction de validation du formulaire
+    function validateForm() {
+      let isValid = true;
+      
+      // Validation du nom complet
+      const fullName = document.getElementById('fullName');
+      if (!fullName.value.trim() || !fullName.checkValidity()) {
+        document.getElementById('fullName-error').textContent = 'Veuillez entrer un nom valide';
+        isValid = false;
+      } else {
+        document.getElementById('fullName-error').textContent = '';
+      }
+
+      // Validation de la date de naissance
+      const birthDate = document.getElementById('birthDate');
+      if (!birthDate.value || !birthDate.checkValidity()) {
+        document.getElementById('birthDate-error').textContent = 'Veuillez entrer une date valide';
+        isValid = false;
+      } else {
+        document.getElementById('birthDate-error').textContent = '';
+      }
+
+      // Validation du type de document
+      const docType = document.getElementById('documentType');
+      if (!docType.value) {
+        document.getElementById('documentType-error').textContent = 'Veuillez sélectionner un type de document';
+        isValid = false;
+      } else {
+        document.getElementById('documentType-error').textContent = '';
+      }
+
+      // Validation de l'email
+      const email = document.getElementById('email');
+      if (!email.value.trim() || !email.checkValidity()) {
+        document.getElementById('email-error').textContent = 'Veuillez entrer un email valide';
+        isValid = false;
+      } else {
+        document.getElementById('email-error').textContent = '';
+      }
+
+      // Validation du consentement
+      const consent = document.getElementById('consent');
+      if (!consent.checked) {
+        document.getElementById('consent-error').textContent = 'Vous devez accepter le traitement des données';
+        isValid = false;
+      } else {
+        document.getElementById('consent-error').textContent = '';
+      }
+
+      return isValid;
+    }
+
+    // Affichage du message de confirmation
+    function showConfirmation(trackingNumber) {
+      if (form && confirmationMessage) {
+        form.classList.add('hidden');
+        confirmationMessage.classList.remove('hidden');
+        document.getElementById('trackingNumber').textContent = trackingNumber || 'DM-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+        
+        // Défilement vers le message de confirmation
+        // confirmationMessage.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // Fonction pour afficher la modale de confirmation
+    function showModal(trackingNumber) {
+      const modal = document.getElementById('confirmationModal');
+      const modalTrackingNumber = document.getElementById('modalTrackingNumber');
+      
+      if (modal && modalTrackingNumber) {
+        modalTrackingNumber.textContent = trackingNumber;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page
+        
+        // Fermer la modale avec le bouton de fermeture
+        document.getElementById('closeModal').addEventListener('click', () => {
+          modal.classList.add('hidden');
+          document.body.style.overflow = ''; // Réactiver le défilement
+        });
+        
+        // Fermer la modale avec le bouton Fermer
+        document.getElementById('closeModalButton').addEventListener('click', () => {
+          modal.classList.add('hidden');
+          document.body.style.overflow = ''; // Réactiver le défilement
+        });
+        
+        // Fermer la modale en cliquant en dehors de celle-ci
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = ''; // Réactiver le défilement
+          }
+        });
+      }
+    }
+    
+    // Modifier la fonction showConfirmation pour utiliser la modale
+    function showConfirmation(trackingNumber) {
+      if (form) {
+        form.classList.add('hidden');
+        showModal(trackingNumber);
+      }
+    }
+  });
+</script>
+   
+    
+    
+  </body>
+</html>
