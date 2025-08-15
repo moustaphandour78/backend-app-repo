@@ -35,6 +35,9 @@
       "src": "/(.*)",
       "dest": "index.html"
     }
-  ]
-  
+  ],
+  "env": {
+    "MONGODB_URI": "MONGODB_URI=mongodb+srv://Bleundour78:M771514427N781227@clusterdarou.rqvtaws.mongodb.net/daroudb",
+    "SECRET_KEY": "19b7d128ac7819c03d43345ce11d03a0085228c17c9a5e31ac1841e4f385ca51"
+  }
 }
